@@ -1,0 +1,27 @@
+aside{
+    ul{
+        @include post($abs:fixed);
+        li{
+            width: $wide;
+            height: $wide;
+            @include layout;
+            font-size: $large + 5;
+            background-color: $black;
+            a{
+                i{
+                    color: $basic;
+                }
+            }
+        }
+    }
+    p{
+        width: $large * 3;
+        height: $large * 3;
+        font-size: $mini + 5;
+        color: $gray;
+        @include layout;
+        @include border;
+        position: fixed;
+        right: $mini; bottom: $mini;
+    }
+}

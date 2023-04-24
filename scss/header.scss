@@ -18,10 +18,10 @@ header{
             }
         }
         nav{
-            margin-left: $more +5;
+            margin-left: $more + 5;
             ul{
                 width: 990px;
-                padding-top: $large +5;
+                padding-top: $large + 5;
                 @include layout($wrap:wrap,$justify:space-between);
                 li{
                     a{

@@ -1,8 +1,16 @@
+@use './variable' as *;
+
 // 재활용
 
 @mixin position($top:absolute,$start:0,$end:0){
     position: $top;
     left: $start; top: $end;
+    @content;
+}
+
+@mixin post($abs:absolute,$right:0,$to:0){
+    position: $abs;
+    right: $right; top: $to;
     @content;
 }
 
@@ -22,4 +30,15 @@
 
 @mixin border($base:#888){
     border: 1px solid $base;
+}
+@mixin info($down:0,$style:$black){
+    font-size: $size;
+    color: $style;
+    margin-bottom: $down;
+    @content;
+}
+
+@mixin padding{
+    padding: 60px 0 77px;
+    @content;
 }

@@ -1,0 +1,116 @@
+/* width->1700px 30px 100% 1435px 700px/ font->13px 16px 20px 45px 100px /color->#fff #111 #888 #ff5151/position->fixed relative absolute /button->66px 86px/ margin-bottom->계속바뀜*/
+
+/* footer */
+footer{
+    padding: 60px 0 77px;
+    background-color: #111;
+}
+footer>div{
+    width: 1435px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+    /* .goleft */
+footer>div>.goleft{
+    width: 700px;
+    padding: 10px 20px;
+    color: #888;
+    font-size: 13px;
+    line-height: 18px;
+}
+footer>div>.goleft>.top{
+    display: flex;
+    margin-bottom: 26px;
+}
+footer>div>.goleft>.top>li{
+    margin-right: 27px;
+}
+footer>div>.goleft>.top>li>a{
+    font-size: 15px;
+    line-height: 34px;
+    font-weight: bold;
+    color: #d6d6d6;
+}
+
+footer>div>.goleft>.company{
+    margin-bottom: 20px;
+}
+footer>div>.goleft>.company>dt{
+    display:inline-block;
+}
+footer>div>.goleft>.company>dd{
+    display:inline-block;
+    padding-left: 6px;
+    border-left: 1px solid #888;
+}
+footer>div>.goleft>.company>dd:nth-child(4){
+    padding-left: 0;
+    border-left: none;
+}
+
+footer>div>.goleft>.bottom{
+    display: flex;
+    margin-bottom: 20px;
+}
+footer>div>.goleft>.bottom>li{
+    margin-right: 8px;
+    padding: 3px;
+    border: 1px solid #888;
+}
+footer>div>.goleft>.bottom>li>a{
+    font-size: 13px;
+    line-height: 18px;
+    color: #888;
+}
+
+footer>div>.goleft>.qna{
+    margin-bottom: 20px;
+}
+footer>div>.goleft>.qna>dt{
+    display: inline-block;
+}
+footer>div>.goleft>.qna>dd{
+    display: inline-block;
+    padding-right: 6px;
+    border-right: 1px solid #888;
+}
+footer>div>.goleft>.qna>dd>span{
+    font-size: 16px;
+}
+footer>div>.goleft>.qna>dd:nth-child(4){
+    border-right: none;
+}
+footer>div>.goleft>.qna>dd:last-child{
+    border-right: none;
+}
+
+     /* goright */
+footer>div>.goright{
+    width: 700px;
+    padding: 10px 20px;
+    color: #888;
+    font-size: 13px;
+    line-height: 18px;
+}
+footer>div>.goright>.topright{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+footer>div>.goright>.topright>li{
+    margin-left: 16px;
+}
+footer>div>.goright>.topright>li>a>i{
+    color: #888;
+    font-size: 25px;
+    line-height: 18px;
+}
+footer>div>.goright>.bottomright{
+    width: 112px;
+    float: right;
+}
+footer>div>.goright>.bottomright>a>img{
+    width: 100%;
+ }

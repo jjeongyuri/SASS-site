@@ -1,0 +1,63 @@
+// header
+header{
+    width: $all;
+    padding-top: $large + 6;
+    @include position($top:fixed);
+    z-index: 100;
+    > div{
+        width: 1700px;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        h1{
+            width: $size * 7;
+            a{
+                img{
+                    width: $all;
+                }
+            }
+        }
+        nav{
+            margin-left: $more +5;
+            ul{
+                width: 990px;
+                padding-top: $large +5;
+                @include layout($wrap:wrap,$justify:space-between);
+                li{
+                    a{
+                        font-size: $small;
+                        color: $basic;
+                    }
+                    &:last-child>a{
+                        color: #0054ff;
+                    }
+                    &:nth-child(5){
+                        border-right: 1px solid $basic;
+                        padding-right: $mini * 2;
+                    }
+                }
+            }
+        }
+        > .box{
+            position: absolute;
+            right: 0; top: $large + 5;
+            box-sizing: $sizing;
+            > .btn{
+                @include layout($wrap:wrap);
+                li{
+                    width: $mini;
+                    height: $mini;
+                    &:nth-child(2){
+                        margin-left: $small;
+                    }
+                    a{
+                        i{
+                            font-size: $large;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

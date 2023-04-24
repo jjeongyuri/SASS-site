@@ -1,0 +1,70 @@
+/* width->1700px 30px 100%/ font->16px 20px /color->#fff #111 /position->fixed relative absolute*/
+
+/* header */
+header{
+    width: 100%;
+    padding-top: 26px;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 100;
+}
+header>div{
+    width: 1700px;
+    margin: 0 auto;
+    display: flex; 
+    position: relative;
+}
+header>div>h1{
+    width: 92px;
+}
+header>div>h1>a>img{
+    width: 100%;
+}
+/* nav */
+header>div>nav{
+    margin-left: 52px;
+}
+header>div>nav>ul{
+    width: 990px;
+    padding-top: 25px;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header>div>nav>ul>li>a{
+   font-size: 16px;
+   color: #fff;
+}
+header>div>nav>ul>li:last-child>a{
+    color: #0054FF;
+}
+header>div>nav>ul>li:nth-child(5){
+    border-right: 1px solid #fff;
+    padding-right: 60px;
+}
+
+/* aside 자리 부족시 right값 바꾸기 */
+header>div>div.box{
+    position: absolute;
+    right: 0; top: 25px;
+    box-sizing: border-box;
+}
+header>div>div.box>ul.btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+header>div>div.box>ul.btn>li{
+    width: 30px;
+    height: 30px;
+}
+header>div>div.box>ul.btn>li:nth-child(2){
+    margin-left: 16px;
+}
+header>div>div.box>ul.btn>li>a{}
+header>div>div.box>ul.btn>li>a>i{
+    font-size: 20px;
+    color: #111;
+}

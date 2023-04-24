@@ -1,0 +1,52 @@
+// 변수 만들기
+
+// width
+$width-content:1170px;
+$width-mini:30px;
+$width-all:100%;
+$width-middle:1435px;
+$width-half:700px;
+
+// font
+$font-size:13px;
+$font-small:16px;
+$font-large:20px;
+$font-more:45px;
+$font-morethan:100px;
+
+// color
+$color-basic:#fff;
+$color-black:#111;
+$color-gray:#888;
+$color-red:#ff5151;
+
+// button
+$button-wide:66px;
+$button-high:86px;
+/*  */
+
+// 단축형
+$content:$width-content;
+$mini:$width-mini;
+$all:$width-all;
+$middle:$width-middle;
+$half:$width-half;
+/*  */
+$size:$font-size;
+$small:$font-small;
+$large:$font-large;
+$more:$font-more;
+$morethan:$font-morethan;
+/*  */
+$basic:$color-basic;
+$black:$color-black;
+$gray:$color-gray;
+$red:$color-red;
+/*  */
+$wide:$button-wide;
+$high:$button-high;
+
+
+// 나머지 변수만들기
+$img:'../images2/';
+$sizing:border-box;

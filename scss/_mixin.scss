@@ -1,0 +1,25 @@
+// 재활용
+
+@mixin position($top:absolute,$start:0,$end:0){
+    position: $top;
+    left: $start; top: $end;
+    @content;
+}
+
+@mixin layout($wrap:nowrap,$justify:center){
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: center;
+    @content;
+}
+
+@mixin margin($bottom:0){
+    margin: 0 auto;
+    margin-bottom:$bottom;
+    @content;
+}
+
+@mixin border($base:#888){
+    border: 1px solid $base;
+}

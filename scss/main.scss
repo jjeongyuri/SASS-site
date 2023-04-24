@@ -1,0 +1,9 @@
+@use './mixin' as *;
+@use './variable' as *;
+
+
+@import './common.scss';
+@import './header.scss';
+@import './content.scss';
+@import './aside.scss';
+@import './footer.scss';

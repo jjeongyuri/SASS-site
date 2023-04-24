@@ -1,0 +1,35 @@
+/* width->1700px 30px 100% 1435px 700px/ font->13px 16px 20px 45px 100px /color->#fff #111 #888 #ff5151/position->fixed relative absolute /button->66px 86px/ margin-bottom->계속바뀜*/
+
+/* aside */
+aside{
+}
+aside>ul{
+    position: fixed;
+    right: 0; top: 0;
+}
+aside>ul>li{
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-color: #111;
+}
+aside>ul>li:nth-child(2){
+}
+aside>ul>li>a>i{
+    color: #fff;
+}
+aside>p{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #888;
+    border: 1px solid #888;
+    position: fixed;
+    right: 30px; bottom: 30px;
+}

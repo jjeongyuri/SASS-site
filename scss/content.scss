@@ -164,7 +164,7 @@
         width: $all;
         background-color: rgba(136, 136, 136, 0.416);
         @include position($start:0,$end:25%);
-        padding:10 0 $small;
+        padding:10px 0 $small;
         h3{
             font-size: $large * 2;
             font-weight: $weight;

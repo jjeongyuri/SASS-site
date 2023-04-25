@@ -1,49 +1,63 @@
+@use './mixin' as *;
+@use './variable' as *;
+
 /* box01 */
-#box01{
+.swiper{
     > div{
         position: relative;
-        > ul{
+        > .swiper-wrapper{
             width: $all * 5;
             display: flex;
             flex-wrap: nowrap;
-            li{
-                width: $all;
+            > .swiper-slide.no01{
+                width: 20%;
                 height: 100vh;
                 background: url('#{$img}/box01_pic1.jpg') no-repeat left top;
-                background-size: $all;
-                text-indent: -99999px;
-                &:nth-child(2){
-                    background-image: url('#{$img}/box01_pic2.jpg');
+                text-indent: -99999px;}
+                .swiper-slide.no02{
+                    background: url('#{$img}/box01_pic2.jpg')  no-repeat left top;
+                    width: 20%;
+                    height: 100vh;
+                    text-indent: -99999px;
                 }
-                &:nth-child(3){
-                    background-image: url('#{$img}/box01_pic3.jpg');
+                .swiper-slide.no03{
+                    background: url('#{$img}/box01_pic3.jpg') no-repeat left top;
+                    width: 20%;
+                    height: 100vh;
+                    text-indent: -99999px;
                 }
-                &:nth-child(4){
-                    background-image: url('#{$img}/box01_pic4.jpg');
+                .swiper-slide.no04{
+                    background: url('#{$img}/box01_pic4.jpg') no-repeat left top;
+                    width: 20%;
+                    height: 100vh;
+                    text-indent: -99999px;
                 }
-                &:nth-child(5){
-                    background-image: url('#{$img}/box01_pic5.jpg');
+                .swiper-slide.no05{
+                    background: url('#{$img}/box01_pic5.jpg') no-repeat left top;
+                    width: 20%;
+                    height: 100vh;
+                    
                 }
-            }
+            
         }
-        > .prev{
+        > .swiper-button-prev{
             @include position($start:$mini,$end:calc($all / 2));
             width: $wide;
             height: $high;
-            color: rgba(255, 255, 255, 0.761);
-            i{
-                font-size: $morethan;
-            }
+            color: $gray;
+            // i{
+            //     font-size: $morethan;
+            // }
         }
-        > .next{
+        > .swiper-button-next{
             position: absolute;
             right: $mini; top: calc($all / 2);
             width: $wide;
             height: $high;
-            color: rgba(255, 255, 255, 0.761);
-            i{
-                font-size: $morethan;
-            }
+            color: $gray;
+            // i{
+            //     font-size: $morethan;
+            // }
         }
     }
 }

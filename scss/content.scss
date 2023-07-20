@@ -3,40 +3,43 @@
 
 /* box01 */
 .swiper{
-    > div{
-        position: relative;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top:68px;
+    box-sizing:border-box;
+    // overflow: hidden;
         > .swiper-wrapper{
             width: $all * 5;
             display: flex;
             flex-wrap: nowrap;
             > .swiper-slide.no01{
-                width: 20%;
-                height: 100vh;
+                width: 100%;
+                height: 100%;
                 background: url('#{$img}/box01_pic1.jpg') no-repeat left top;
                 text-indent: -99999px;}
                 .swiper-slide.no02{
-                    background: url('#{$img}/box01_pic2.jpg')  no-repeat left top;
-                    width: 20%;
-                    height: 100vh;
+                    background-image: url('#{$img}/box01_pic2.jpg')  no-repeat left top;
+                    width: 100%;
+                    height: 100%;
                     text-indent: -99999px;
                 }
                 .swiper-slide.no03{
                     background: url('#{$img}/box01_pic3.jpg') no-repeat left top;
-                    width: 20%;
-                    height: 100vh;
+                    width: 100%;
+                    height: 100%;
                     text-indent: -99999px;
                 }
                 .swiper-slide.no04{
                     background: url('#{$img}/box01_pic4.jpg') no-repeat left top;
-                    width: 20%;
-                    height: 100vh;
+                    width: 100%;
+                    height: 100%;
                     text-indent: -99999px;
                 }
                 .swiper-slide.no05{
                     background: url('#{$img}/box01_pic5.jpg') no-repeat left top;
-                    width: 20%;
-                    height: 100vh;
-                    
+                    width: 100%;
+                    height: 100%;  
                 }
             
         }
@@ -59,7 +62,6 @@
             //     font-size: $morethan;
             // }
         }
-    }
 }
 
 /* box02 */
@@ -79,10 +81,9 @@
             margin: 0 auto;
             overflow: hidden;
             #all{
-                width: 4305px;
+                width: 4310px;
                 @include layout($justify:space-between);
                 ul{
-                    width: $middle;
                     display: flex;
                     li{
                         width: 280px;
@@ -138,6 +139,7 @@
             width: $wide;
             height: $high;
             color: $gray;
+            cursor: pointer;
             > i{
                 font-size: $more;
             }
@@ -147,6 +149,7 @@
             width: $wide;
             height: $high;
             color: $gray;
+            cursor: pointer;
             > i{
                 font-size: $more;
             }
@@ -214,7 +217,7 @@
             margin-bottom: $more;
         }
         ul{
-            width: 550px;
+            width: 350px;
             @include layout($wrap:wrap,$justify:space-between);
             margin-bottom: 56px;
             li{
@@ -232,6 +235,8 @@
                 > .every{
                     width: 2010px;
                     @include layout;
+                    > .Mpic{
+                        display: flex;
                     dl{
                         width: 280px;
                         margin-right: 7px;
@@ -273,7 +278,7 @@
                                     border-radius: calc($all / 2);
                                     background-color: $black;
                                     &:nth-child(2){
-                                        background-color: $basic;
+                                        background-color: #f6e9e9;
                                     }
                                     &:nth-child(3){
                                         background-color: #011c70;
@@ -284,10 +289,11 @@
                         }
                     }
                 }
+                }
             }
         }
     }
-    > .prev{
+    > .Twoprev{
         @include position($start:117px,$end:50%);
         width: $wide;
         height: $high;
@@ -296,7 +302,7 @@
             font-size: $more;
         }
     }
-    > .next{
+    > .Twonext{
         @include post($right:117px,$to:50%);
         width: $wide;
         height: $high;
@@ -425,7 +431,7 @@
             margin-bottom: $more;
         }
         > ul{
-            width: 550px;
+            width: 350px;
             @include layout($wrap:wrap,$justify:space-between);
             margin-bottom: 56px;
             li{
@@ -445,6 +451,8 @@
                     display: flex;
                     flex-wrap: nowrap;
                     justify-content: center;
+                    > .Wpic{
+                        display: flex;
                     dl{
                         width: 280px;
                         margin-right: 7px;
@@ -480,7 +488,7 @@
                                     border-radius: calc($all / 2);
                                     background-color: $black;
                                     &:nth-child(2){
-                                        background-color: $basic;
+                                        background-color: rgb(246, 233, 233);
                                     }
                                     &:nth-child(3){
                                         background-color: #011c70;
@@ -489,11 +497,12 @@
                             }
                         }
                     }
+                  }
                 }
             }
         }
     }
-    > .prev{
+    > .Wprev{
         @include position($start:117px,$end:calc($all / 2));
         width: $wide;
         height: $high;
@@ -502,7 +511,7 @@
             font-size: $more;
         }
     }
-    > .next{
+    > .Wnext{
         @include post($right:117px,$to:calc($all / 2));
         width: $wide;
         height: $high;

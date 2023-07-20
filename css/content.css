@@ -81,7 +81,7 @@
     align-items: center;
 }
 #box02>#gallery>#show>#all>ul{
-    width: 1435px;
+    /* width: 1435px; */
     display: flex;
 }
 #box02>#gallery>#show>#all>ul>li{

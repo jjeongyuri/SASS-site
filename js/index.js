@@ -1,10 +1,19 @@
  // import Swiper bundle with all modules installed
- import Swiper from 'swiper';
+//  import Swiper from 'swiper';
  import 'swiper/swiper.scss';
  import 'swiper/modules/navigation/navigation.scss';
  import 'swiper/modules/effect-cube/effect-cube.scss';
  import $ from "jquery";
 
+
+ $(function(){
+
+    // 함수실행 
+       picTo();
+       MPic();
+       WPic();
+
+    //  
 
 
 const swiper = new Swiper('.swiper', {
@@ -29,24 +38,69 @@ const swiper = new Swiper('.swiper', {
     },
   });
 
-  // box02->gallery
-  $(function(){
+
+
+ // box02->gallery
+  function picTo(){
     // li Width 값 변수만들기
-    let liWidth = $('#show li').width();
+    let liWidth = $('#show>#all>ul>li').outerWidth(true);
     // console.log(liWidth);
+    $('#show>#all>ul>li:last').prependTo('#all>ul');
+    $('#all').css('margin-left','-'+liWidth+'px');
+
+    // 버튼 누르면 이동
     $('#gallery>.prev').on('click',function(e){
-      $('#show>#all>ul').animate({marginLeft:'-=' + liWidth + 'px'},function(){
+      $('#show>#all').animate({marginLeft:'-=' + liWidth + 'px'},function(){
         // 클릭하면 li 첫번째 뒤로 이동+css수정
-        $('#show>#all>ul>li:first-child').appendTo('#show>#all>ul');
-        $('#show>#all>ul').css('margin-left','-' + liWidth + 'px');
+        $('#show>#all>ul>li:first').appendTo('#show>#all>ul');
+        $('#show>#all').css('margin-left','-' + liWidth + 'px');
       });
     });
+
     $('#gallery>.next').on('click',function(e){
-      $('#show>#all>ul').animate({marginLeft:'+=' + liWidth + 'px'});
-      $('#show>#all>ul>li:last-child').prependTo('#show>#all>ul');
-      $('#show>#all>ul').css('margin-left','+' + liWidth + 'px');
+      $('#show>#all').animate({marginLeft:'+=' + liWidth + 'px'},function(){
+        $('#show>#all>ul>li:last').prependTo('#show>#all>ul');
+        $('#show>#all').css('margin-left','-' + liWidth + 'px');
+      });
     });
-  });
+  } 
+  // 
+
+
+
+  // box04 갤러리 이동
+  function MPic(){
+    let menWidth = $('.every>.Mpic>dl').outerWidth(true);
+    // console.log(menWidth)
+    $('.every>.Mpic>dl:last').prependTo('.every>.Mpic');
+    // $('.every').css('margin-left','-'+menWidth+'px');
+
+    $('.Twoprev').on('click',function(e){
+      $('.every').animate({marginLeft:'-='+menWidth+'px'},function(){
+        $('.every>.Mpic>dl:first').appendTo('.every>.Mpic');
+        $('.every').css('margin-left','-'+menWidth+'px')
+      })
+    });
+
+    $('.Twonext').on('click',function(e){
+      $('.every').animate({marginLeft:'+='+menWidth+'px'},function(){
+        $('.every>.Mpic>dl:last').prependTo('.every>.Mpic');
+        $('.every').css('margin-left','-'+menWidth+'px')
+      })
+    });
+  }
+  //
+  
+  // box06 갤러리 이동
+  function WPic(){
+    let WomenWidth = $('.every>.Wpic>dl').outerWidth(true);
+    // console.log(WomenWidth);
+    // $('.every>.Wpic>dl:last').prependTo('.every>.Wpic');
+    // $('.every').css('margin-left','-'+WomenWidth+'px');
+  }
+   
+  // 
+
 
   $(function(){
     $('#men>ul>li:first-child>a').addClass('.selected');
@@ -60,7 +114,7 @@ const swiper = new Swiper('.swiper', {
     })
     })
 
-
+  })
 
 
 

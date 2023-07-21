@@ -18,7 +18,7 @@
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
-    direction: 'vertical',
+    direction: 'horizontal',
     loop: true,
   
     // If we need pagination
@@ -70,27 +70,39 @@ const swiper = new Swiper('.swiper', {
 
   // box04 갤러리 이동
   function MPic(){
-    let menWidth = $('.every>.Mpic>dl').outerWidth(true);
-    // console.log(menWidth)
-    $('.every>.Mpic>dl:last').prependTo('.every>.Mpic');
+    let menWidth = $('.every>dl').outerWidth(true);
+    console.log(menWidth);
+    $('.every>dl:last-of-type').prependTo('.every');
+    $('.every').css('margin-left','-'+menWidth+'px');
+
+    // 버튼 누르면 이동
+    $('.Twoprev').on('click',function(e){
+      $('.every').animate({marginLeft:'-=' + menWidth + 'px'},function(){
+        // 클릭하면 li 첫번째 뒤로 이동+css수정
+        $('.every>dl:first-child').appendTo('.every');
+        $('.every').css('margin-left','-' + menWidth + 'px');
+      });
+    });
+
+
+    // let menWidth = $('.every>dl').outerWidth(true);
+    // // console.log(menWidth)
+    // $('.every>dl:last-of-type').prependTo('.every');
     // $('.every').css('margin-left','-'+menWidth+'px');
 
-    $('.Twoprev').on('click',function(e){
-      $('.every').animate({marginLeft:'-='+menWidth+'px'},function(){
-        $('.every>.Mpic>dl:first').appendTo('.every>.Mpic');
-        $('.every').css('margin-left','-'+menWidth+'px')
-      })
-    });
-
-    $('.Twonext').on('click',function(e){
-      $('.every').animate({marginLeft:'+='+menWidth+'px'},function(){
-        $('.every>.Mpic>dl:last').prependTo('.every>.Mpic');
-        $('.every').css('margin-left','-'+menWidth+'px')
-      })
-    });
+    // // // 버튼 누르면 이동
+    // $('.Twoprev').on('click',function(e){
+    //   $('.every').animate({marginLeft:'-=' + menWidth + 'px'},function(){
+    //     // 클릭하면 li 첫번째 뒤로 이동+css수정
+    //     $('.every>dl:first').appendTo('.every');
+    //     // $('.every').css('margin-left','-' + menWidth + 'px');
+    //     console.log(a)
+    //   });
+    // });
   }
   //
   
+
   // box06 갤러리 이동
   function WPic(){
     let WomenWidth = $('.every>.Wpic>dl').outerWidth(true);

@@ -6,43 +6,35 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    padding-top:68px;
     box-sizing:border-box;
     // overflow: hidden;
         > .swiper-wrapper{
             width: $all * 5;
             display: flex;
             flex-wrap: nowrap;
-            > .swiper-slide.no01{
+            > .swiper-slide .no01{
                 width: 100%;
                 height: 100%;
                 background: url('#{$img}/box01_pic1.jpg') no-repeat left top;
                 text-indent: -99999px;
                 }
-                .swiper-slide.no02{
-                    background: url('#{$img}/box01_pic2.jpg')  no-repeat left top;
-                    width: 100%;
-                    height: 100%;
+            .swiper-slide .no02{
+                width: 100%;
+                height: 100%;
+                    background: url('#{$img}/box01_pic2.jpg') no-repeat left top;
                     text-indent: -99999px;
                 }
-                .swiper-slide.no03{
-                    background: url('#{$img}/box01_pic3.jpg') no-repeat left top;
-                    width: 100%;
-                    height: 100%;
-                    text-indent: -99999px;
+            .swiper-slide .no03{
+                    background-image: url('#{$img}/box01_pic3.jpg');
                 }
-                .swiper-slide.no04{
-                    background: url('#{$img}/box01_pic4.jpg') no-repeat left top;
-                    width: 100%;
-                    height: 100%;
-                    text-indent: -99999px;
+            .swiper-slide .no04{
+                    background-image: url('#{$img}/box01_pic4.jpg');
                 }
-                .swiper-slide.no05{
-                    background: url('#{$img}/box01_pic5.jpg') no-repeat left top;
-                    width: 100%;
-                    height: 100%;  
+            .swiper-slide .no05{
+                    background-image: url('#{$img}/box01_pic5.jpg');
+ 
                 }
-            
+
         }
         > .swiper-button-prev{
             @include position($start:$mini,$end:calc($all / 2));
@@ -63,7 +55,7 @@
             //     font-size: $morethan;
             // }
         }
-}
+} 
 
 /* box02 */
 #box02{
@@ -429,91 +421,343 @@
             margin-bottom: $more;
         }
         > ul{
-            width: 350px;
+            width: 300px;
             @include layout($wrap:wrap,$justify:space-between);
             margin-bottom: 56px;
             li{
+                cursor: pointer;
                 a{
                     font-size: $small;
                     color: $gray;
                 }
             }
         }
+    }
         // picture
-        > .picture{
-            > .see{
+        > .Wpicture{
+            > .Wsee{
                 width: $middle;
-                overflow: hidden;
-                > .every{
-                    width: $middle * 2;
+                margin: 0 auto;
+                // overflow: hidden;
+                > .Wevery{
+                    width: $middle * 3;
                     display: flex;
                     flex-wrap: nowrap;
-                    justify-content: center;
-                    > .Wpic{
+                    .OUTERWEAR{
+                        width: $middle;
                         display: flex;
-                    dl{
-                        width: 280px;
-                        margin-right: 7px;
-                        img{
-                            width: $all;
-                            margin-bottom: $small;
-                        }
-                        dt{
-                            @include info($down:$large + 4);
-                        }
-                        dd{
-                            @include info($down:$more); 
-                            > ins{
-                                @include info($style:$black){
-                                    background-color:$basic
-                                };
-                            }
-                            > del{
-                                @include info($style:$black);
-                            }
-                            &:nth-child(3){
-                                span{
-                                    @include info($style:$red);
-                                    margin-left: 5px;
+                        flex-wrap: nowrap;
+                        li{
+                            width: 280px;
+                            margin-right: 7px;
+                            dl{
+                                img{
+                                    width: $all;
+                                    margin-bottom: $small;
+                                }
+                                dt{
+                                    @include info($down:$large + 4);
+                                }
+                                dd{
+                                    @include info($down:$more); 
+                                    ins{
+                                        @include info($style:$black){
+                                            background-color:$basic
+                                        };
+                                    }
+                                    del{
+                                        @include info($style:$black);
+                                    }
+                                    span{
+                                        color: $red;
+                                    }
+                                }
+                                dd{
+                                    &:last-child{
+                                        span{
+                                            display: inline-block;
+                                            width: 18px;
+                                            height: 18px;
+                                            border-radius:50%;
+                                            background-color: #0550fd;
+                                            &:last-child{
+                                                background-color: #e573ae;
+                                            }
+                                        }
+                                    }
                                 }
                             }
-                            &:last-child{
-                                margin-bottom: 0;
-                                span{
-                                    display: inline-block;
-                                    width: $small + 2;
-                                    height: $small + 2;
-                                    border-radius: calc($all / 2);
-                                    background-color: $black;
-                                    &:nth-child(2){
-                                        background-color: rgb(246, 233, 233);
+                            &:nth-child(2){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                                background-color: #fdfbdc; 
+                                                &:last-child{
+                                                    background-color: #000;
+                                                } 
+                                            }
+                                        }
                                     }
-                                    &:nth-child(3){
-                                        background-color: #011c70;
+                                }
+                            }
+                            &:nth-child(3){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                            background-color: #5677A6;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(4){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                                background-color: #e9d38d;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(5){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                                background-color: #98B4D4;
+                                            }
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                  }
+                    .T-SHIRT{
+                        width: $middle;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        li{
+                            width: 280px;
+                            margin-right: 7px;
+                            dl{
+                                img{
+                                    width: $all;
+                                    margin-bottom: $small;
+                                }
+                                dt{
+                                    @include info($down:$large + 4);
+                                }
+                                dd{
+                                    @include info($down:$more); 
+                                    ins{
+                                        @include info($style:$black){
+                                            background-color:$basic
+                                        };
+                                    }
+                                    del{
+                                        @include info($style:$black);
+                                    }
+                                    span{
+                                        color: $red;
+                                    }
+                                }
+                                dd{
+                                    &:last-child{
+                                        span{
+                                            display: inline-block;
+                                            width: 18px;
+                                            height: 18px;
+                                            border-radius:50%;
+                                            background-color: #464646;
+                                            &:last-child{
+                                              background-color: #000000;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                                background-color: #FAAFBA;
+                                                &:nth-child(2){
+                                                    background-color: #fff;
+                                                } 
+                                                &:last-child{
+                                                    background-color: #000;
+                                                } 
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(3){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                            background-color: #66cc99;
+                                            &:last-child{
+                                                background-color: #efe29d;
+                                            }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(4){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                                background-color: #98B4D4;
+                                                &:nth-child(2){
+                                                    background-color: #f3df9e;
+                                                }
+                                                &:nth-child(3){
+                                                    background-color: #000;
+                                                }
+                                                &:nth-child(4){
+                                                    background-color: #c2c2c2;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(5){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                                background-color: #98B4D4;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .PANTS{
+                        width: $middle;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        li{
+                            width: 280px;
+                            margin-right: 7px;
+                            dl{
+                                img{
+                                    width: $all;
+                                    margin-bottom: $small;
+                                }
+                                dt{
+                                    @include info($down:$large + 4);
+                                }
+                                dd{
+                                    @include info($down:$more); 
+                                    ins{
+                                        @include info($style:$black){
+                                            background-color:$basic
+                                        };
+                                    }
+                                    del{
+                                        @include info($style:$black);
+                                    }
+                                    span{
+                                        color: $red;
+                                    }
+                                }
+                                dd{
+                                    &:last-child{
+                                        span{
+                                            display: inline-block;
+                                            width: 18px;
+                                            height: 18px;
+                                            border-radius:50%;
+                                            background-color: #0550fd;
+                                            &:last-child{
+                                                background-color: #98B4D4;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                                background-color: #fff; 
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(3){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                            background-color: #98B4D4;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(4){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                                background-color: #000;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(5){
+                                dl{
+                                    dd{
+                                        &:last-child{
+                                            span{
+                                                background-color: #5677A6;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    }
                 }
             }
-        }
-    }
+
+
     > .Wprev{
-        @include position($start:117px,$end:calc($all / 2));
+        @include position($start:8%,$end:45%);
         width: $wide;
         height: $high;
         color: $gray;
+        display: flex;
+        align-items: center;
         > i{
             font-size: $more;
         }
     }
     > .Wnext{
-        @include post($right:117px,$to:calc($all / 2));
+        @include post($right:8%,$to:45%);
         width: $wide;
         height: $high;
         color: $gray;
+        display: flex;
+        align-items: center;
         > i{
             font-size: $more;
         }

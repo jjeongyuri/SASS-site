@@ -1,4 +1,4 @@
-aside{
+#submenu{
     ul{
         @include post($abs:fixed);
         li{
@@ -14,6 +14,9 @@ aside{
             }
         }
     }
+}
+
+#topmenu{
     p{
         width: $large * 3;
         height: $large * 3;

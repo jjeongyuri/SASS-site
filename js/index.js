@@ -1,5 +1,5 @@
  // import Swiper bundle with all modules installed
-//  import Swiper from 'swiper';
+ import Swiper from 'swiper';
  import 'swiper/swiper.scss';
  import 'swiper/modules/navigation/navigation.scss';
  import 'swiper/modules/effect-cube/effect-cube.scss';
@@ -12,7 +12,6 @@
        picTo();
        MPic();
        WPic();
-
     //  
 
 
@@ -76,13 +75,13 @@ const swiper = new Swiper('.swiper', {
     $('.every').css('margin-left','-'+menWidth+'px');
 
     // 버튼 누르면 이동
-    $('.Twoprev').on('click',function(e){
-      $('.every').animate({marginLeft:'-=' + menWidth + 'px'},function(){
-        // 클릭하면 li 첫번째 뒤로 이동+css수정
-        $('.every>dl:first-child').appendTo('.every');
-        $('.every').css('margin-left','-' + menWidth + 'px');
-      });
-    });
+    // $('.Twoprev').on('click',function(e){
+    //   $('.every').animate({marginLeft:'-=' + menWidth + 'px'},function(){
+    //     // 클릭하면 li 첫번째 뒤로 이동+css수정
+    //     $('.every>dl:first-child').appendTo('.every');
+    //     $('.every').css('margin-left','-' + menWidth + 'px');
+    //   });
+    // });
 
 
     // let menWidth = $('.every>dl').outerWidth(true);
@@ -105,10 +104,37 @@ const swiper = new Swiper('.swiper', {
 
   // box06 갤러리 이동
   function WPic(){
-    let WomenWidth = $('.every>.Wpic>dl').outerWidth(true);
-    // console.log(WomenWidth);
-    // $('.every>.Wpic>dl:last').prependTo('.every>.Wpic');
-    // $('.every').css('margin-left','-'+WomenWidth+'px');
+    let Wwidth = $('.Wevery>ul>li').outerWidth(true);
+    console.log(Wwidth);
+    $('.Wevery>ul:last>li:last').prependTo('.Weveryx');
+    $('.Wevery').css('margin-left','-'+ Wwidth+'px');
+
+    // 버튼 클릭
+    // $('.Wprev').on('click',function(e){
+    //   $('.Wevery').animate({marginLeft:'-='+ Wwidth +'px'},function(){
+    //     $('.Wevery>ul:first').appendTo('.Wevery');
+    //     $('.Wevery').css('margin-left','-'+Wwidth+'px')
+    //   })
+    // });
+    // $('.Wnext').on('click',function(e){
+    //   $('.Wevery').animate({marginLeft:'+='+ Wwidth +'px'},function(){
+    //     $('.Wevery>ul:last').prependTo('.Wevery');
+    //     $('.Wevery').css('margin-left','-'+Wwidth+'px')
+    //   })
+    // });
+    // $('.Wprev').on('click',function(e){
+    //   $('.Wevery').animate({marginLeft:'-='+ Wwidth +'px'},function(){
+    //     $('.Wevery>ul:first').appendTo('.Wevery');
+    //     $('.Wevery').css('margin-left','-'+Wwidth+'px')
+    //   })
+    // });
+    // $('.Wnext').on('click',function(e){
+    //   $('.Wevery').animate({marginLeft:'+='+ Wwidth +'px'},function(){
+    //     $('.Wevery>ul:last').prependTo('.Wevery');
+    //     $('.Wevery').css('margin-left','-'+Wwidth+'px')
+    //   })
+    // });
+
   }
    
   // 

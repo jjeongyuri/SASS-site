@@ -9,33 +9,31 @@
     box-sizing:border-box;
     // overflow: hidden;
         > .swiper-wrapper{
-            width: $all * 5;
-            display: flex;
-            flex-wrap: nowrap;
-            > .swiper-slide .no01{
-                width: 100%;
-                height: 100%;
-                background: url('#{$img}/box01_pic1.jpg') no-repeat left top;
-                text-indent: -99999px;
-                }
-            .swiper-slide .no02{
-                width: 100%;
-                height: 100%;
-                    background: url('#{$img}/box01_pic2.jpg') no-repeat left top;
-                    text-indent: -99999px;
-                }
-            .swiper-slide .no03{
-                    background-image: url('#{$img}/box01_pic3.jpg');
-                }
-            .swiper-slide .no04{
-                    background-image: url('#{$img}/box01_pic4.jpg');
-                }
-            .swiper-slide .no05{
-                    background-image: url('#{$img}/box01_pic5.jpg');
- 
-                }
-
+            // width: $all * 5;
+            // display: flex;
+            // flex-wrap: nowrap;
+        // >
+        // li.swiper-slide .no01{
+        //     background-color: red;
+        // }
+        li.swiper-slide.no01{
+            background: url('../images2/box01_pic1.jpg') center top no-repeat;
         }
+        li.swiper-slide.no02{
+            background: url('../images2/box01_pic2.jpg') center top no-repeat;
+        }
+         li.swiper-slide.no03{
+            background: url('../images2/box01_pic3.jpg') center top no-repeat;
+        }
+         li.swiper-slide.no04{
+            background: url('../images2/box01_pic4.jpg') center top no-repeat;
+        }
+         li.swiper-slide.no05{
+            background: url('../images2/box01_pic5.jpg') center top no-repeat;
+        }
+        }
+         
+         
         > .swiper-button-prev{
             @include position($start:$mini,$end:calc($all / 2));
             width: $wide;
@@ -220,14 +218,16 @@
                 }
             }
         }
+    }
         // picture
-        > .picture{
-            > .see{
+        > .Mpicture{
+            > .Msee{
                 width: $middle;
-                // overflow: hidden;
-                > .every{
-                    width: 2296px;
-                    @include layout($wrap:wrap);
+                margin: 0 auto;
+                overflow: hidden;
+                > .Mevery{
+                    width: 2009px;
+                    @include layout($wrap:nowrap);
                     dl{
                         width: 280px;
                         margin-right: 7px;
@@ -282,7 +282,7 @@
                 }
             }
         }
-    }
+
     > .Twoprev{
         @include position($start:117px,$end:50%);
         width: $wide;
@@ -438,7 +438,7 @@
             > .Wsee{
                 width: $middle;
                 margin: 0 auto;
-                // overflow: hidden;
+                overflow: hidden;
                 > .Wevery{
                     width: $middle * 3;
                     display: flex;

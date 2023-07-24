@@ -1,8 +1,3 @@
- // import Swiper bundle with all modules installed
- import Swiper from 'swiper';
- import 'swiper/swiper.scss';
- import 'swiper/modules/navigation/navigation.scss';
- import 'swiper/modules/effect-cube/effect-cube.scss';
  import $ from "jquery";
 
 
@@ -13,31 +8,6 @@
        MPic();
        WPic();
     //  
-
-
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
-
-
 
  // box02->gallery
   function picTo(){
@@ -104,37 +74,24 @@ const swiper = new Swiper('.swiper', {
 
   // box06 갤러리 이동
   function WPic(){
-    let Wwidth = $('.Wevery>ul>li').outerWidth(true);
+    let Wwidth = $('.Wevery>ul').outerWidth(true);
     console.log(Wwidth);
-    $('.Wevery>ul:last>li:last').prependTo('.Weveryx');
+    $('.Wevery>ul:last').prependTo('.Wevery');
     $('.Wevery').css('margin-left','-'+ Wwidth+'px');
 
     // 버튼 클릭
-    // $('.Wprev').on('click',function(e){
-    //   $('.Wevery').animate({marginLeft:'-='+ Wwidth +'px'},function(){
-    //     $('.Wevery>ul:first').appendTo('.Wevery');
-    //     $('.Wevery').css('margin-left','-'+Wwidth+'px')
-    //   })
-    // });
-    // $('.Wnext').on('click',function(e){
-    //   $('.Wevery').animate({marginLeft:'+='+ Wwidth +'px'},function(){
-    //     $('.Wevery>ul:last').prependTo('.Wevery');
-    //     $('.Wevery').css('margin-left','-'+Wwidth+'px')
-    //   })
-    // });
-    // $('.Wprev').on('click',function(e){
-    //   $('.Wevery').animate({marginLeft:'-='+ Wwidth +'px'},function(){
-    //     $('.Wevery>ul:first').appendTo('.Wevery');
-    //     $('.Wevery').css('margin-left','-'+Wwidth+'px')
-    //   })
-    // });
-    // $('.Wnext').on('click',function(e){
-    //   $('.Wevery').animate({marginLeft:'+='+ Wwidth +'px'},function(){
-    //     $('.Wevery>ul:last').prependTo('.Wevery');
-    //     $('.Wevery').css('margin-left','-'+Wwidth+'px')
-    //   })
-    // });
-
+    $('.Wprev').on('click',function(e){
+      $('.Wevery').animate({marginLeft:'-='+ Wwidth +'px'},function(){
+        $('.Wevery>ul:first').appendTo('.Wevery');
+        $('.Wevery').css('margin-left','-'+Wwidth+'px')
+      })
+    });
+    $('.Wnext').on('click',function(e){
+      $('.Wevery').animate({marginLeft:'+='+ Wwidth +'px'},function(){
+        $('.Wevery>ul:last').prependTo('.Wevery');
+        $('.Wevery').css('margin-left','-'+Wwidth+'px')
+      })
+    });
   }
    
   // 

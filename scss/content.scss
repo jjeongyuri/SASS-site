@@ -18,18 +18,23 @@
         // }
         li.swiper-slide.no01{
             background: url('../images2/box01_pic1.jpg') center top no-repeat;
+            text-indent: -999999px;
         }
         li.swiper-slide.no02{
             background: url('../images2/box01_pic2.jpg') center top no-repeat;
+            text-indent: -999999px;
         }
          li.swiper-slide.no03{
             background: url('../images2/box01_pic3.jpg') center top no-repeat;
+            text-indent: -999999px;
         }
          li.swiper-slide.no04{
             background: url('../images2/box01_pic4.jpg') center top no-repeat;
+            text-indent: -999999px;
         }
          li.swiper-slide.no05{
             background: url('../images2/box01_pic5.jpg') center top no-repeat;
+            text-indent: -999999px;
         }
         }
          
@@ -228,6 +233,7 @@
                 > .Mevery{
                     width: 2009px;
                     @include layout($wrap:nowrap);
+                    flex-wrap: wrap;
                     dl{
                         width: 280px;
                         margin-right: 7px;

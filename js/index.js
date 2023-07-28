@@ -1,107 +1,89 @@
- import $ from "jquery";
+import $ from "jquery";
 
 
- $(function(){
+$(function () {
 
-    // 함수실행 
-       picTo();
-       MPic();
-       WPic();
-    //  
+  // 함수실행 
+  picTo();
+  Wtab();
+  Mtab();
+  top();
+  //  
 
- // box02->gallery
-  function picTo(){
+  // box02->gallery
+  function picTo() {
     // li Width 값 변수만들기
     let liWidth = $('#show>#all>ul>li').outerWidth(true);
     // console.log(liWidth);
     $('#show>#all>ul>li:last').prependTo('#all>ul');
-    $('#all').css('margin-left','-'+liWidth+'px');
+    $('#all').css('margin-left', '-' + liWidth + 'px');
 
     // 버튼 누르면 이동
-    $('#gallery>.prev').on('click',function(e){
-      $('#show>#all').animate({marginLeft:'-=' + liWidth + 'px'},function(){
+    $('#gallery>.prev').on('click', function (e) {
+      $('#show>#all').animate({ marginLeft: '-=' + liWidth + 'px' }, function () {
         // 클릭하면 li 첫번째 뒤로 이동+css수정
         $('#show>#all>ul>li:first').appendTo('#show>#all>ul');
-        $('#show>#all').css('margin-left','-' + liWidth + 'px');
+        $('#show>#all').css('margin-left', '-' + liWidth + 'px');
       });
     });
 
-    $('#gallery>.next').on('click',function(e){
-      $('#show>#all').animate({marginLeft:'+=' + liWidth + 'px'},function(){
+    $('#gallery>.next').on('click', function (e) {
+      $('#show>#all').animate({ marginLeft: '+=' + liWidth + 'px' }, function () {
         $('#show>#all>ul>li:last').prependTo('#show>#all>ul');
-        $('#show>#all').css('margin-left','-' + liWidth + 'px');
-      });
-    });
-  } 
-  // 
-
-
-
-  // box04 갤러리 이동
-  function MPic(){
-    let menWidth = $('.Mevery>dl').outerWidth(true);
-    // console.log(menWidth);
-    $('.Mevery>dl:last-of-type').prependTo('.Mevery');
-    $('.Mevery').css('margin-left','-'+menWidth+'px');
-
-    // 버튼 누르면 이동 
-    $('.Twoprev').on('click',function(e){
-      $('.Mevery').animate({marginLeft:'-=' + menWidth + 'px'},function(){
-        // 클릭하면 li 첫번째 뒤로 이동+css수정
-        $('.Mevery>dl:first-child').appendTo('.Mevery');
-        $('.Mevery').css('margin-left','-' + menWidth + 'px');
-      });
-    });
-    
-    $('.Twonext').on('click',function(e){
-      $('.Mevery').animate({marginLeft:'+=' + menWidth + 'px'},function(){
-        // 클릭하면 li 첫번째 뒤로 이동+css수정
-        $('.Mevery>dl:last-child').prependTo('.Mevery');
-        $('.Mevery').css('margin-left','-' + menWidth + 'px');
+        $('#show>#all').css('margin-left', '-' + liWidth + 'px');
       });
     });
   }
-  //
-  
-
-  // box06 갤러리 이동
-  function WPic(){
-    let Wwidth = $('.Wevery>ul').outerWidth(true);
-    console.log(Wwidth);
-    $('.Wevery>ul:last').prependTo('.Wevery');
-    $('.Wevery').css('margin-left','-'+ Wwidth+'px');
-
-    // 버튼 클릭
-    $('.Wprev').on('click',function(e){
-      $('.Wevery').animate({marginLeft:'-='+ Wwidth +'px'},function(){
-        $('.Wevery>ul:first').appendTo('.Wevery');
-        $('.Wevery').css('margin-left','-'+Wwidth+'px')
-      })
-    });
-    $('.Wnext').on('click',function(e){
-      $('.Wevery').animate({marginLeft:'+='+ Wwidth +'px'},function(){
-        $('.Wevery>ul:last').prependTo('.Wevery');
-        $('.Wevery').css('margin-left','-'+Wwidth+'px')
-      })
-    });
-  }
-   
   // 
 
 
-  $(function(){
-    $('#men>ul>li:first-child>a').addClass('.selected');
-    $('#men>ul>li>a').on('click',function(e){
-      let aName = $(this).attr('href');
-      let Wide = $('.see').width();
-      // console.log(Wide);
-      $(aName).show();
-      $('#men>ul>li>a').removeClass('selected');
-      $(this).addClass('selected');
-    })
-    })
+  // box04 탭메뉴
+  function Mtab() {
+    $('#men>ul>li:first>a').addClass('Mselect');
+    $('.Mevery>ul:not(:first)').hide();
 
-  })
+    $('#men>ul>li>a').on('click', function (e) {
+      let Mhref = $(this).attr('href');
+      $('.Mevery>ul').hide();
+      $(Mhref).show();
+      $('#men>ul>li>a').removeClass('Mselect');
+      $(this).addClass('Mselect');
+
+      return false;
+
+    })
+  }
+  // 
+
+  // box06 탭메뉴
+  function Wtab() {
+    $('#women>ul>li:first>a').addClass('Wselect');
+    $('.Wevery>ul:not(:first)').hide();
+
+
+    $('#women>ul>li>a').on('click', function (e) {
+      let Whref = $(this).attr('href');
+      console.log(Whref)
+      $('.Wevery>ul').hide();
+      $(Whref).show();
+      $('#women>ul>li>a').removeClass('Wselect');
+      $(this).addClass('Wselect');
+
+      return false;
+
+    })
+  }
+
+
+  // topmenu
+  function top(){
+    $( '#topmenu' ).on('click',function() {
+      $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+      return false;
+    } );
+  }
+
+})
 
 
 

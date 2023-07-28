@@ -2,122 +2,146 @@
 @use './variable' as *;
 
 /* box01 */
-.swiper{
+.swiper {
     width: 100%;
     height: 100vh;
     position: relative;
-    box-sizing:border-box;
+    box-sizing: border-box;
+
     // overflow: hidden;
-        > .swiper-wrapper{
-            // width: $all * 5;
-            // display: flex;
-            // flex-wrap: nowrap;
+    >.swiper-wrapper {
+
+        // width: $all * 5;
+        // display: flex;
+        // flex-wrap: nowrap;
         // >
         // li.swiper-slide .no01{
         //     background-color: red;
         // }
-        li.swiper-slide.no01{
+        li.swiper-slide.no01 {
             background: url('../images2/box01_pic1.jpg') center top no-repeat;
             text-indent: -999999px;
         }
-        li.swiper-slide.no02{
+
+        li.swiper-slide.no02 {
             background: url('../images2/box01_pic2.jpg') center top no-repeat;
             text-indent: -999999px;
         }
-         li.swiper-slide.no03{
+
+        li.swiper-slide.no03 {
             background: url('../images2/box01_pic3.jpg') center top no-repeat;
             text-indent: -999999px;
         }
-         li.swiper-slide.no04{
+
+        li.swiper-slide.no04 {
             background: url('../images2/box01_pic4.jpg') center top no-repeat;
             text-indent: -999999px;
         }
-         li.swiper-slide.no05{
+
+        li.swiper-slide.no05 {
             background: url('../images2/box01_pic5.jpg') center top no-repeat;
             text-indent: -999999px;
         }
-        }
-         
-         
-        > .swiper-button-prev{
-            @include position($start:$mini,$end:calc($all / 2));
-            width: $wide;
-            height: $high;
-            color: $gray;
-            // i{
-            //     font-size: $morethan;
-            // }
-        }
-        > .swiper-button-next{
-            position: absolute;
-            right: $mini; top: calc($all / 2);
-            width: $wide;
-            height: $high;
-            color: $gray;
-            // i{
-            //     font-size: $morethan;
-            // }
-        }
-} 
+    }
+
+
+    >.swiper-button-prev {
+        @include position($start: $mini, $end: calc($all / 2));
+        width: $wide;
+        height: $high;
+        color: $gray;
+        // i{
+        //     font-size: $morethan;
+        // }
+    }
+
+    >.swiper-button-next {
+        position: absolute;
+        right: $mini;
+        top: calc($all / 2);
+        width: $wide;
+        height: $high;
+        color: $gray;
+        // i{
+        //     font-size: $morethan;
+        // }
+    }
+}
 
 /* box02 */
-#box02{
+#box02 {
     padding: $mini * 2 0 77px;
-    h3{
+
+    h3 {
         text-align: $center;
         color: $black;
         font-size: $small * 2;
         margin-bottom: $more + 9;
     }
+
     // 갤러리
-    #gallery{
+    #gallery {
         position: $relative;
-        #show{
+
+        #show {
             width: $middle;
             margin: 0 auto;
             overflow: hidden;
-            #all{
+
+            #all {
                 width: 4310px;
-                @include layout($justify:space-between);
-                ul{
+                @include layout($justify: space-between);
+
+                ul {
                     display: flex;
-                    li{
+
+                    li {
                         width: 280px;
                         margin-left: 7px;
-                        figure{
+
+                        figure {
                             margin-bottom: $size + 2;
-                            img{
+
+                            img {
                                 width: $all;
                             }
                         }
-                        figcaption{
-                            dl{
+
+                        figcaption {
+                            dl {
                                 position: $relative;
-                                dt{
+
+                                dt {
                                     font-size: $size;
                                     color: $black;
                                     margin-bottom: $large + 4;
                                 }
-                                dd{
-                                    ins{
+
+                                dd {
+                                    ins {
                                         font-size: $size;
                                         color: $black;
                                         background-color: $basic;
                                     }
-                                    del{
+
+                                    del {
                                         font-size: $size;
                                         color: $gray;
                                     }
-                                    &:nth-child(2){
+
+                                    &:nth-child(2) {
                                         margin-bottom: $size;
                                     }
-                                    &:nth-child(3){
+
+                                    &:nth-child(3) {
                                         position: absolute;
-                                        left: $morethan; bottom: $mini + 4;
+                                        left: $morethan;
+                                        bottom: $mini + 4;
                                         font-size: $size - 1;
                                         color: $red;
                                     }
-                                    > button{
+
+                                    >button {
                                         font-size: $size;
                                         color: $gray;
                                         background-color: $basic;
@@ -130,23 +154,27 @@
                 }
             }
         }
-        > .prev{
-            @include position($start:117px,$end:40%);
+
+        >.prev {
+            @include position($start: 117px, $end: 40%);
             width: $wide;
             height: $high;
             color: $gray;
             cursor: pointer;
-            > i{
+
+            >i {
                 font-size: $more;
             }
         }
-        > .next{
-            @include post($right:117px,$to:40%);
+
+        >.next {
+            @include post($right: 117px, $to: 40%);
             width: $wide;
             height: $high;
             color: $gray;
             cursor: pointer;
-            > i{
+
+            >i {
                 font-size: $more;
             }
         }
@@ -154,38 +182,45 @@
 }
 
 /* box03 */
-#box03{
+#box03 {
     background: url('#{$img}/box03_pic1.jpg') no-repeat left top;
     background-size: $all;
     height: 100vh;
     position: $relative;
-    > div{
+
+    >div {
         width: $all;
         background-color: rgba(136, 136, 136, 0.416);
-        @include position($start:0,$end:25%);
-        padding:10px 0 $small;
-        h3{
+        @include position($start: 0, $end: 25%);
+        padding: 10px 0 $small;
+
+        h3 {
             font-size: $large * 2;
             font-weight: $weight;
             color: $basic;
             margin: 0 0 $size * 2 $morethan * 2;
         }
-        p{
+
+        p {
             width: 745px;
             font-size: $large;
             line-height: $large;
             color: $basic;
             margin: 0 0 $more $morethan * 2;
-            &:nth-child(2){
+
+            &:nth-child(2) {
                 margin-bottom: $large + 2;
             }
-            &:nth-child(3){
+
+            &:nth-child(3) {
                 font-size: $small;
                 margin-bottom: $large * 3;
             }
-            &:nth-child(4){
+
+            &:nth-child(4) {
                 margin-bottom: 0;
-                > button{
+
+                >button {
                     width: 243px;
                     font-size: $large;
                     line-height: $more + 5;
@@ -198,13 +233,15 @@
 }
 
 /* box04 */
-#box04{
+#box04 {
     padding: $large * 3 0 77px;
     position: $relative;
-    #men{
+
+    #men {
         width: $middle;
-        margin: 0 auto;
-        h3{
+        @include margin;
+
+        h3 {
             width: $morethan * 5;
             font-size: $large + 10;
             font-weight: $weight;
@@ -212,75 +249,396 @@
             padding-bottom: $size;
             margin-bottom: $more;
         }
-        ul{
-            width: 350px;
-            @include layout($wrap:wrap,$justify:space-between);
+
+        ul {
+            width: 300px;
+            @include layout($wrap: wrap, $justify: space-between);
             margin-bottom: 56px;
-            li{
-                a{
+
+            li {
+                cursor: pointer;
+
+                a {
                     font-size: $small;
                     color: $gray;
                 }
             }
         }
     }
-        // picture
-        > .Mpicture{
-            > .Msee{
-                width: $middle;
-                margin: 0 auto;
-                overflow: hidden;
-                > .Mevery{
-                    width: 2009px;
-                    @include layout($wrap:nowrap);
-                    flex-wrap: wrap;
-                    dl{
+
+    // picture
+    >.Mpicture {
+        >.Msee {
+            width: $middle;
+            margin: 0 auto;
+            overflow: hidden;
+
+            >.Mevery {
+                width: $middle * 3;
+                display: flex;
+                flex-wrap: nowrap;
+                // @include layout($wrap: nowrap);
+                // flex-wrap: wrap;
+                .OUTERWEAR {
+                    width: $middle;
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    li {
                         width: 280px;
                         margin-right: 7px;
-                        img{
-                           width: $all;
-                           margin-bottom: 15px; 
-                        }
-                        dt{
-                            font-size: $size;
-                            color: $black;
-                            margin-bottom: $large + 4;
-                        }
-                        dd{
-                            font-size: $size;
-                            color: $black;
-                            margin-bottom: $more;
-                            ins{
-                                font-size: $size;
-                                color: $black;
-                                background-color: $basic
+
+                        dl {
+                            img {
+                                width: $all;
+                                margin-bottom: $small;
                             }
-                            del{
-                                font-size: $size;
-                                color: $gray; 
+
+                            dt {
+                                @include info($down: $large + 4);
                             }
-                            &:nth-child(3){
-                                span{
-                                    font-size: $size;
+
+                            dd {
+                                @include info($down: $more);
+
+                                ins {
+                                    @include info($style: $black) {
+                                        background-color: $basic
+                                    }
+
+                                    ;
+                                }
+
+                                del {
+                                    @include info($style: $black);
+                                }
+
+                                span {
                                     color: $red;
-                                    margin-left: 5px;
                                 }
                             }
-                            &:last-child{
-                                margin-bottom: 0;
-                                span{
-                                    display: inline-block;
-                                    width: $large;
-                                    height: $large;
-                                    border-radius: calc($all / 2);
-                                    background-color: $black;
-                                    &:nth-child(2){
-                                        background-color: #f6e9e9;
+
+                            dd {
+                                &:last-child {
+                                    span {
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                        border-radius: 50%;
+                                        background-color: #242D3E;
+
+                                        &:last-child {
+                                            background-color: #fdfbdc;
+                                        }
                                     }
-                                    &:nth-child(3){
-                                        background-color: #011c70;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #000000;
+
+                                            &:last-child {
+                                                background-color: #fdfbdc;
+                                            }
+                                        }
                                     }
-                                    
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #000000;
+                                            &:last-child{
+                                                background-color: #234911;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #5677A6;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(5) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #011c70;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .T-SHIRT {
+                    width: $middle;
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    li {
+                        width: 280px;
+                        margin-right: 7px;
+
+                        dl {
+                            img {
+                                width: $all;
+                                margin-bottom: $small;
+                            }
+
+                            dt {
+                                @include info($down: $large + 4);
+                            }
+
+                            dd {
+                                @include info($down: $more);
+
+                                ins {
+                                    @include info($style: $black) {
+                                        background-color: $basic
+                                    }
+
+                                    ;
+                                }
+
+                                del {
+                                    @include info($style: $black);
+                                }
+
+                                span {
+                                    color: $red;
+                                }
+                            }
+
+                            dd {
+                                &:last-child {
+                                    span {
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                        border-radius: 50%;
+                                        background-color: #464646;
+
+                                        &:last-child {
+                                            background-color: #fdfbdc;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #009e25;
+
+                                            &:nth-child(2) {
+                                                background-color: #000000;
+                                            }
+
+                                            &:last-child {
+                                                background-color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #011c70;
+                                            &:nth-child(2) {
+                                                background-color: #ffef00;
+                                            }
+                                            &:nth-child(3) {
+                                                background-color: #FFFFFF;
+                                            }
+                                            &:last-child {
+                                                background-color: #0d1557;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #f3df9e;
+
+                                            &:nth-child(2) {
+                                                background-color: #7820b9;
+                                            }
+
+                                            &:nth-child(3) {
+                                                background-color: #FFFFFF;
+                                            }
+
+                                            &:nth-child(4) {
+                                                background-color: #000000;
+                                            }
+                                            &:last-child {
+                                                background-color: #ff0518;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(5) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #e28ce4;
+                                            &:nth-child(2) {
+                                                background-color: #000;
+                                            }
+                                            &:nth-child(3) {
+                                                background-color: #fff;
+                                            }
+                                            &:last-child {
+                                                background-color: #7820b9;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .PANTS {
+                    width: $middle;
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    li {
+                        width: 280px;
+                        margin-right: 7px;
+
+                        dl {
+                            img {
+                                width: $all;
+                                margin-bottom: $small;
+                            }
+
+                            dt {
+                                @include info($down: $large + 4);
+                            }
+
+                            dd {
+                                @include info($down: $more);
+
+                                ins {
+                                    @include info($style: $black) {
+                                        background-color: $basic
+                                    }
+
+                                    ;
+                                }
+
+                                del {
+                                    @include info($style: $black);
+                                }
+
+                                span {
+                                    color: $red;
+                                }
+                            }
+
+                            dd {
+                                &:last-child {
+                                    span {
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                        border-radius: 50%;
+                                        background-color: #0550fd;
+
+                                        &:last-child {
+                                            background-color: #000;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #414F6B;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #5677A6;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #98B4D4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(5) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #98B4D4;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -288,122 +646,126 @@
                 }
             }
         }
-
-    > .Twoprev{
-        @include position($start:117px,$end:50%);
-        width: $wide;
-        height: $high;
-        color: $gray;
-        > i{
-            font-size: $more;
-        }
-    }
-    > .Twonext{
-        @include post($right:117px,$to:50%);
-        width: $wide;
-        height: $high;
-        color: $gray;
-        > i{
-            font-size: $more;
-        }
     }
 }
 
 /* box05 */
-#box05{
+#box05 {
     padding: $large * 3 0 77px;
     background-color: rgba(136, 136, 136, 0.416);
-    > .sale{
+
+    >.sale {
         width: $middle;
         margin: 0 auto;
-        @include layout($justify:space-between);
-        position:$relative;
+        @include layout($justify: space-between);
+        position: $relative;
+
         // left
-        > .left{
+        >.left {
             width: $half;
             @include margin;
-            div{
+
+            div {
                 color: $black;
                 margin: -30px 0 0 $morethan * 4;
-                h4{
-                    span{
+
+                h4 {
+                    span {
                         display: block;
-                        &:nth-child(1){
+
+                        &:nth-child(1) {
                             font-size: $size;
                             margin-bottom: 7px;
                         }
-                        &:nth-child(2){
+
+                        &:nth-child(2) {
                             font-size: $small;
                             font-weight: $weight;
                             margin-bottom: $large + 9;
                         }
                     }
                 }
-                p{
-                    &:nth-child(2){
+
+                p {
+                    &:nth-child(2) {
                         margin-bottom: $size;
-                        span{
+
+                        span {
                             font-size: $large + $small;
                             font-weight: $weight;
-                            a{
+
+                            a {
                                 font-size: $more;
                                 font-weight: $weight;
                             }
                         }
                     }
-                    &:nth-child(3){
+
+                    &:nth-child(3) {
                         margin-bottom: $large + 9;
-                        span{
+
+                        span {
                             font-size: $small;
                             font-weight: $weight;
                         }
                     }
-                    > button{
+
+                    >button {
                         width: $morethan;
                         height: $more - 10;
                         font-size: $size;
                         font-weight: $weight;
                         color: $basic;
                         background-color: $black;
-                        @include border($base:$black);
+                        @include border($base: $black);
                     }
                 }
-                > figure{
+
+                >figure {
                     width: $morethan * 4;
-                    @include position($start:0,$end:15px);
-                    img{
+                    @include position($start: 0, $end: 15px);
+
+                    img {
                         width: $all;
                     }
                 }
             }
         }
+
         // right
-        > .right{
+        >.right {
             width: $half;
             position: $relative;
-            h4{
+
+            h4 {
                 font-size: $large + 8;
-                @include post($right:105px,$to:45%);
+                @include post($right: 105px, $to: 45%);
                 background-color: rgba(238, 234, 234, 0.423);
-                span{
+
+                span {
                     display: block;
-                    a{
+
+                    a {
                         font-size: $large * 2;
                         font-weight: $weight;
                         color: $black;
                     }
-                    &:first-child{
+
+                    &:first-child {
                         margin-bottom: $size;
                     }
-                    &:nth-child(2){
+
+                    &:nth-child(2) {
                         font-size: $small;
                     }
                 }
             }
-            > figure{
+
+            >figure {
                 width: $morethan * 5;
                 @include margin;
-                img{
+
+                img {
                     width: $all;
                 }
             }
@@ -412,13 +774,15 @@
 }
 
 /* box06 */
-#box06{
+#box06 {
     padding: $large * 3 0 77px;
     position: $relative;
-    > #women{
+
+    >#women {
         width: $middle;
         @include margin;
-        > h3{
+
+        >h3 {
             width: $morethan * 5;
             font-size: $large + 10;
             font-weight: $weight;
@@ -426,380 +790,422 @@
             padding-bottom: $size;
             margin-bottom: $more;
         }
-        > ul{
+
+        >ul {
             width: 300px;
-            @include layout($wrap:wrap,$justify:space-between);
+            @include layout($wrap: wrap, $justify: space-between);
             margin-bottom: 56px;
-            li{
+
+            li {
                 cursor: pointer;
-                a{
+
+                a {
                     font-size: $small;
                     color: $gray;
                 }
             }
         }
     }
-        // picture
-        > .Wpicture{
-            > .Wsee{
-                width: $middle;
-                margin: 0 auto;
-                overflow: hidden;
-                > .Wevery{
-                    width: $middle * 3;
+
+    // picture
+    >.Wpicture {
+        >.Wsee {
+            width: $middle;
+            margin: 0 auto;
+            overflow: hidden;
+
+            >.Wevery {
+                width: $middle * 3;
+                display: flex;
+                flex-wrap: nowrap;
+
+                .OUTERWEAR {
+                    width: $middle;
                     display: flex;
                     flex-wrap: nowrap;
-                    .OUTERWEAR{
-                        width: $middle;
-                        display: flex;
-                        flex-wrap: nowrap;
-                        li{
-                            width: 280px;
-                            margin-right: 7px;
-                            dl{
-                                img{
-                                    width: $all;
-                                    margin-bottom: $small;
+
+                    li {
+                        width: 280px;
+                        margin-right: 7px;
+
+                        dl {
+                            img {
+                                width: $all;
+                                margin-bottom: $small;
+                            }
+
+                            dt {
+                                @include info($down: $large + 4);
+                            }
+
+                            dd {
+                                @include info($down: $more);
+
+                                ins {
+                                    @include info($style: $black) {
+                                        background-color: $basic
+                                    }
+
+                                    ;
                                 }
-                                dt{
-                                    @include info($down:$large + 4);
+
+                                del {
+                                    @include info($style: $black);
                                 }
-                                dd{
-                                    @include info($down:$more); 
-                                    ins{
-                                        @include info($style:$black){
-                                            background-color:$basic
-                                        };
-                                    }
-                                    del{
-                                        @include info($style:$black);
-                                    }
-                                    span{
-                                        color: $red;
-                                    }
-                                }
-                                dd{
-                                    &:last-child{
-                                        span{
-                                            display: inline-block;
-                                            width: 18px;
-                                            height: 18px;
-                                            border-radius:50%;
-                                            background-color: #0550fd;
-                                            &:last-child{
-                                                background-color: #e573ae;
-                                            }
-                                        }
-                                    }
+
+                                span {
+                                    color: $red;
                                 }
                             }
-                            &:nth-child(2){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                                background-color: #fdfbdc; 
-                                                &:last-child{
-                                                    background-color: #000;
-                                                } 
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(3){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                            background-color: #5677A6;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(4){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                                background-color: #e9d38d;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(5){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                                background-color: #98B4D4;
-                                            }
+
+                            dd {
+                                &:last-child {
+                                    span {
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                        border-radius: 50%;
+                                        background-color: #0550fd;
+
+                                        &:last-child {
+                                            background-color: #e573ae;
                                         }
                                     }
                                 }
                             }
                         }
-                    }
-                    .T-SHIRT{
-                        width: $middle;
-                        display: flex;
-                        flex-wrap: nowrap;
-                        li{
-                            width: 280px;
-                            margin-right: 7px;
-                            dl{
-                                img{
-                                    width: $all;
-                                    margin-bottom: $small;
-                                }
-                                dt{
-                                    @include info($down:$large + 4);
-                                }
-                                dd{
-                                    @include info($down:$more); 
-                                    ins{
-                                        @include info($style:$black){
-                                            background-color:$basic
-                                        };
-                                    }
-                                    del{
-                                        @include info($style:$black);
-                                    }
-                                    span{
-                                        color: $red;
-                                    }
-                                }
-                                dd{
-                                    &:last-child{
-                                        span{
-                                            display: inline-block;
-                                            width: 18px;
-                                            height: 18px;
-                                            border-radius:50%;
-                                            background-color: #464646;
-                                            &:last-child{
-                                              background-color: #000000;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(2){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                                background-color: #FAAFBA;
-                                                &:nth-child(2){
-                                                    background-color: #fff;
-                                                } 
-                                                &:last-child{
-                                                    background-color: #000;
-                                                } 
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(3){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                            background-color: #66cc99;
-                                            &:last-child{
-                                                background-color: #efe29d;
-                                            }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(4){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                                background-color: #98B4D4;
-                                                &:nth-child(2){
-                                                    background-color: #f3df9e;
-                                                }
-                                                &:nth-child(3){
-                                                    background-color: #000;
-                                                }
-                                                &:nth-child(4){
-                                                    background-color: #c2c2c2;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(5){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                                background-color: #98B4D4;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .PANTS{
-                        width: $middle;
-                        display: flex;
-                        flex-wrap: nowrap;
-                        li{
-                            width: 280px;
-                            margin-right: 7px;
-                            dl{
-                                img{
-                                    width: $all;
-                                    margin-bottom: $small;
-                                }
-                                dt{
-                                    @include info($down:$large + 4);
-                                }
-                                dd{
-                                    @include info($down:$more); 
-                                    ins{
-                                        @include info($style:$black){
-                                            background-color:$basic
-                                        };
-                                    }
-                                    del{
-                                        @include info($style:$black);
-                                    }
-                                    span{
-                                        color: $red;
-                                    }
-                                }
-                                dd{
-                                    &:last-child{
-                                        span{
-                                            display: inline-block;
-                                            width: 18px;
-                                            height: 18px;
-                                            border-radius:50%;
-                                            background-color: #0550fd;
-                                            &:last-child{
-                                                background-color: #98B4D4;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(2){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                                background-color: #fff; 
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(3){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                            background-color: #98B4D4;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &:nth-child(4){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
+
+                        &:nth-child(2) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #fdfbdc;
+
+                                            &:last-child {
                                                 background-color: #000;
                                             }
                                         }
                                     }
                                 }
                             }
-                            &:nth-child(5){
-                                dl{
-                                    dd{
-                                        &:last-child{
-                                            span{
-                                                background-color: #5677A6;
-                                            }
+                        }
+
+                        &:nth-child(3) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #5677A6;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #e9d38d;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(5) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #98B4D4;
                                         }
                                     }
                                 }
                             }
                         }
                     }
+                }
 
+                .T-SHIRT {
+                    width: $middle;
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    li {
+                        width: 280px;
+                        margin-right: 7px;
+
+                        dl {
+                            img {
+                                width: $all;
+                                margin-bottom: $small;
+                            }
+
+                            dt {
+                                @include info($down: $large + 4);
+                            }
+
+                            dd {
+                                @include info($down: $more);
+
+                                ins {
+                                    @include info($style: $black) {
+                                        background-color: $basic
+                                    }
+
+                                    ;
+                                }
+
+                                del {
+                                    @include info($style: $black);
+                                }
+
+                                span {
+                                    color: $red;
+                                }
+                            }
+
+                            dd {
+                                &:last-child {
+                                    span {
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                        border-radius: 50%;
+                                        background-color: #464646;
+
+                                        &:last-child {
+                                            background-color: #000000;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #FAAFBA;
+
+                                            &:nth-child(2) {
+                                                background-color: #fff;
+                                            }
+
+                                            &:last-child {
+                                                background-color: #000;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #66cc99;
+
+                                            &:last-child {
+                                                background-color: #efe29d;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #98B4D4;
+
+                                            &:nth-child(2) {
+                                                background-color: #f3df9e;
+                                            }
+
+                                            &:nth-child(3) {
+                                                background-color: #000;
+                                            }
+
+                                            &:nth-child(4) {
+                                                background-color: #c2c2c2;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(5) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #98B4D4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
+
+                .PANTS {
+                    width: $middle;
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    li {
+                        width: 280px;
+                        margin-right: 7px;
+
+                        dl {
+                            img {
+                                width: $all;
+                                margin-bottom: $small;
+                            }
+
+                            dt {
+                                @include info($down: $large + 4);
+                            }
+
+                            dd {
+                                @include info($down: $more);
+
+                                ins {
+                                    @include info($style: $black) {
+                                        background-color: $basic
+                                    }
+
+                                    ;
+                                }
+
+                                del {
+                                    @include info($style: $black);
+                                }
+
+                                span {
+                                    color: $red;
+                                }
+                            }
+
+                            dd {
+                                &:last-child {
+                                    span {
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                        border-radius: 50%;
+                                        background-color: #0550fd;
+
+                                        &:last-child {
+                                            background-color: #98B4D4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #98B4D4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #000;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(5) {
+                            dl {
+                                dd {
+                                    &:last-child {
+                                        span {
+                                            background-color: #5677A6;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
-
-
-    > .Wprev{
-        @include position($start:8%,$end:45%);
-        width: $wide;
-        height: $high;
-        color: $gray;
-        display: flex;
-        align-items: center;
-        > i{
-            font-size: $more;
-        }
-    }
-    > .Wnext{
-        @include post($right:8%,$to:45%);
-        width: $wide;
-        height: $high;
-        color: $gray;
-        display: flex;
-        align-items: center;
-        > i{
-            font-size: $more;
         }
     }
 }
 
 /* box07 */
-#box07{
+#box07 {
     @include padding;
-    > div{
+
+    >div {
         width: $middle;
         height: 530px;
         @include margin;
         padding: $morethan 570px 0 40px;
         background: url('#{$img}/box07_pic1.jpg') no-repeat right bottom;
         box-sizing: border-box;
-        @include border($base:#e5e5e5);
-        h3{
-           @include margin($bottom:74px);
-           text-align: center;
+        @include border($base: #e5e5e5);
+
+        h3 {
+            @include margin($bottom: 74px);
+            text-align: center;
         }
-        p{
+
+        p {
             font-size: $small;
             line-height: $size * 2;
             margin-bottom: 77px;
-            span{
+
+            span {
                 font-weight: $weight;
             }
         }
-        > dl{
-            @include layout($justify:space-between);
-            dd{
-             @include info($style:$gray){
-                line-height: $large + 4;
-                margin-left: $small * 2;
-             }   
+
+        >dl {
+            @include layout($justify: space-between);
+
+            dd {
+                @include info($style: $gray) {
+                    line-height: $large + 4;
+                    margin-left: $small * 2;
+                }
             }
         }
     }

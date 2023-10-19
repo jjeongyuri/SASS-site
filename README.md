@@ -8,8 +8,8 @@
 
 ### 배포링크
 
-배포방식은 AWS:S3의 간이 배포를 이용하였습니다.
-<a href=>링크 이동하기</a>
+배포방식은 AWS:S3의 간이 배포를 이용하였습니다.</br>
+<a href="http://yurijeong.sass.site.s3-website-us-east-1.amazonaws.com">링크 이동하기</a>
 
 ### 개발 도구 및 환경
 
